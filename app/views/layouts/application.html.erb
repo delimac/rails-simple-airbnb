@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsSimpleAirbnb</title>
+    <title> <%= content_for :page_title %> - Simple Airbnb</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +11,39 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="d-flex flex-column position-relative">
+    <div class="body-wrap">
+      <header>
+        <div class="header-wrap d-flex flex-wrap justify-content-between p-4 bg-light align-items-center">
+          <div class="logo">
+            <h4 class="mb-0">
+              <%= link_to "Simple Airbnb", root_path, class: "text-decoration-none text-pink" %>
+            </h4>
+          </div>
+          <div class="d-flex flex-wrap justify-content-between">
+            <div class="me-4">
+              <form action="/">
+                <input type="text" name="location" placeholder="Search location..." class="form-control" value="<%= @location %>">
+              </form>
+            </div>
+            <div>
+              <nav>
+                <p class="mb-0">
+                  <%= link_to "Add Flat", new_flat_path , class: "btn btn-primary" %>
+                </p>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="container content-wrap my-4">
+          <%= yield %>
+        </div>
+      </div>
+      
+
+    </div>
   </body>
 </html>

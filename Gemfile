@@ -51,3 +51,27 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Font Awesome Gem
+gem 'font-awesome-sass', '~> 5.15.1'
+
+# Geocoder Gem
+gem 'geocoder'
+
+# Simple Form to make forms nice and easy
+gem 'simple_form'
+
+# Adding Bootstrap 5.x.x
+gem 'bootstrap', '~> 5.0.0.beta3'
+
+# Adding Jquery for Rails
+gem 'jquery-rails'
+
+# Adding Active Link To (Make Filters Active)
+gem 'active_link_to'
+
+# Adding Profanity Filter
+gem 'profanity_filter'
+
+# Tell Heroku the current ruby version
+ruby '2.6.6'

@@ -1,0 +1,37 @@
+$pink: #FF385C;
+
+.text-pink {
+  color: $pink;
+}
+
+.rounded-bnb {
+  border-radius: 12px;
+}
+
+.flat-name {
+
+  h4 {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    height: 2.6em; /* Fallback for non-webkit, line-height * 2 */
+    line-height: 1.3em;
+    -webkit-line-clamp: 2; /* when changing, don't forget to change the fallback line-height and height */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}
+
+.flat-desc-wrap {
+  min-height: 200px;
+}
